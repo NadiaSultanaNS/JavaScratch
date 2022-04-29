@@ -15,6 +15,12 @@ public class ModifiedFibonacci {
         return num3;
 
     }
+    public static int fibonacciRecursion(int n){
+        if (n == 1 || n == 2){
+            return 1;
+        }
+        return fibonacciRecursion(n-1)+fibonacciRecursion(n-2);
+    }
 
     public static void main(String[] args) {
         System.out.println("Enter the number: ");
@@ -22,6 +28,10 @@ public class ModifiedFibonacci {
         System.out.println("Fibonacci Series: ");
         for (int i = 1; i < number; i++) {
             System.out.println(fibonacciModified(i)+" ");
+
+        }
+        for (int i = 1; i <number ; i++) {
+            System.out.println(fibonacciRecursion(i)+" ");
         }
     }
 }
